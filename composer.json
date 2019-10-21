@@ -1,0 +1,38 @@
+{
+    "name": "jtelesforoantonio/laravel-guzzle-api",
+    "description": "Integration of guzzle http client in laravel for API requests",
+    "keywords": ["laravel", "guzzle", "api", "restful api", "web services", "http client"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Telesforo Antonio",
+            "email": "jonyjony777@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "guzzlehttp/guzzle-services": "^1.1",
+        "monolog/monolog": "~1.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "JTelesforoAntonio\\LaravelGuzzleApi\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JTelesforoAntonio\\LaravelGuzzleApi\\LaravelGuzzleApiServiceProvider"
+            ],
+            "aliases": {
+                "Api": "JTelesforoAntonio\\LaravelGuzzleApi\\Facade"
+            }
+        }
+    }
+}
